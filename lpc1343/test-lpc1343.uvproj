@@ -273,7 +273,7 @@
               <MiscControls></MiscControls>
               <Define>POSNANO,_DBG</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\cmsis\lpc13xx\inc;.;..\..\picoos\inc;..\..\picoos\ports\cortex-m;..\common;..\..\picoos-micro</IncludePath>
+              <IncludePath>..\..\cmsis-collection\lpc13xx\inc;.;..\..\picoos\inc;..\..\picoos\ports\cortex-m;..\common;..\..\picoos-micro</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -409,12 +409,12 @@
             <File>
               <FileName>core_cm3.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../cmsis/lpc13xx/src/core_cm3.c</FilePath>
+              <FilePath>..\..\cmsis-collection\lpc13xx\src\core_cm3.c</FilePath>
             </File>
             <File>
               <FileName>system_LPC13xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../cmsis/lpc13xx/src/system_LPC13xx.c</FilePath>
+              <FilePath>..\..\cmsis-collection\lpc13xx\src\system_LPC13xx.c</FilePath>
             </File>
           </Files>
         </Group>

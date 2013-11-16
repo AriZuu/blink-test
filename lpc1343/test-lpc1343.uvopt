@@ -533,7 +533,7 @@
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>../../cmsis/lpc13xx/src/core_cm3.c</PathWithFileName>
+      <PathWithFileName>..\..\cmsis-collection\lpc13xx\src\core_cm3.c</PathWithFileName>
       <FilenameWithoutPath>core_cm3.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -549,7 +549,7 @@
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>../../cmsis/lpc13xx/src/system_LPC13xx.c</PathWithFileName>
+      <PathWithFileName>..\..\cmsis-collection\lpc13xx\src\system_LPC13xx.c</PathWithFileName>
       <FilenameWithoutPath>system_LPC13xx.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
