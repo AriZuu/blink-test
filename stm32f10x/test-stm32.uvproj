@@ -273,7 +273,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER,POSNANO,_DBG</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\cmsis\stm32f10x\inc;.;..\..\picoos\inc;..\..\picoos\ports\cortex-m;..\common;..\..\picoos-micro</IncludePath>
+              <IncludePath>..\..\cmsis-collection\stm32f10x\inc;.;..\..\picoos\inc;..\..\picoos\ports\cortex-m;..\common;..\..\picoos-micro</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -394,27 +394,27 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>cmsis</GroupName>
+          <GroupName>New Group</GroupName>
           <Files>
             <File>
               <FileName>core_cm3.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../cmsis/stm32f10x/src/core_cm3.c</FilePath>
+              <FilePath>..\..\cmsis-collection\stm32f10x\src\core_cm3.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../cmsis/stm32f10x/src/stm32f10x_gpio.c</FilePath>
+              <FilePath>..\..\cmsis-collection\stm32f10x\src\stm32f10x_gpio.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../cmsis/stm32f10x/src/stm32f10x_rcc.c</FilePath>
+              <FilePath>..\..\cmsis-collection\stm32f10x\src\stm32f10x_rcc.c</FilePath>
             </File>
             <File>
               <FileName>system_stm32f10x.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../cmsis/stm32f10x/src/system_stm32f10x.c</FilePath>
+              <FilePath>..\..\cmsis-collection\stm32f10x\src\system_stm32f10x.c</FilePath>
             </File>
           </Files>
         </Group>

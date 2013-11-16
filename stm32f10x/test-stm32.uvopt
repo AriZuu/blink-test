@@ -470,7 +470,7 @@
   </Group>
 
   <Group>
-    <GroupName>cmsis</GroupName>
+    <GroupName>New Group</GroupName>
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -486,7 +486,7 @@
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>../../cmsis/stm32f10x/src/core_cm3.c</PathWithFileName>
+      <PathWithFileName>..\..\cmsis-collection\stm32f10x\src\core_cm3.c</PathWithFileName>
       <FilenameWithoutPath>core_cm3.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -502,7 +502,7 @@
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>../../cmsis/stm32f10x/src/stm32f10x_gpio.c</PathWithFileName>
+      <PathWithFileName>..\..\cmsis-collection\stm32f10x\src\stm32f10x_gpio.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_gpio.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -518,7 +518,7 @@
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>../../cmsis/stm32f10x/src/stm32f10x_rcc.c</PathWithFileName>
+      <PathWithFileName>..\..\cmsis-collection\stm32f10x\src\stm32f10x_rcc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_rcc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -534,7 +534,7 @@
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>../../cmsis/stm32f10x/src/system_stm32f10x.c</PathWithFileName>
+      <PathWithFileName>..\..\cmsis-collection\stm32f10x\src\system_stm32f10x.c</PathWithFileName>
       <FilenameWithoutPath>system_stm32f10x.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
