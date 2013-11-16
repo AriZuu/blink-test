@@ -1,0 +1,72 @@
+/*
+ * Copyright (c) 2006-2013, Ari Suutari <ari@stonepile.fi>.
+ * All rights reserved. 
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ *  1. Redistributions of source code must retain the above copyright
+ *     notice, this list of conditions and the following disclaimer.
+ *  2. Redistributions in binary form must reproduce the above copyright
+ *     notice, this list of conditions and the following disclaimer in the
+ *     documentation and/or other materials provided with the distribution.
+ *  3. The name of the author may not be used to endorse or promote
+ *     products derived from this software without specific prior written
+ *     permission. 
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS
+ * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,
+ * INDIRECT,  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+#include <picoos.h>
+#include <stdbool.h>
+#include "test.h"
+
+#define LED1_PORT 0      // Port for led#define LED2_PORT 0#define LED3_PORT 0
+
+#define LED1_BIT 2       // Bit on port for led#define LED2_BIT 3       // Bit on port for led#define LED3_BIT 8
+#define LED_ON 1        // Level to set port to turn on led#define LED_OFF 0       // Level to set port to turn off ledvoid testLedSet(LED_t led, bool on)
+{
+  switch (led)
+  {
+  case Red:
+    Chip_GPIO_SetPinState(LPC_GPIO, LED1_PORT, LED1_BIT, on);
+    break;
+
+  case Green:
+    Chip_GPIO_SetPinState(LPC_GPIO, LED2_PORT, LED2_BIT, on);
+    break;
+
+  case Yellow:
+    Chip_GPIO_SetPinState(LPC_GPIO, LED3_PORT, LED3_BIT, on);
+    break;
+
+  }
+}
+
+void testInitIO()
+{
+  Chip_GPIO_Init(LPC_GPIO);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO, LED1_PORT, LED1_BIT);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO, LED2_PORT, LED2_BIT);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO, LED3_PORT, LED3_BIT);
+}
+
+int main(int argc, char **argv)
+{
+  Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_6, (IOCON_FUNC1 | IOCON_MODE_INACT));/* RXD */
+  Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_7, (IOCON_FUNC1 | IOCON_MODE_INACT));/* TXD */
+
+  testStart();
+  return 0;
+}

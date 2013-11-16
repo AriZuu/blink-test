@@ -1,0 +1,13 @@
+*.LST
+*.d
+*.lst
+*.__i
+*.lnp
+*.plg
+*.dep
+*.elf
+bin
+picoos.uvgui.ArJo
+/test-lpc2129.uvgui.ArJo
+/test-lpc2129.uvgui_ArJo.bak
+/test-lpc2129_uvopt.bak
