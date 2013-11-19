@@ -1,0 +1,12 @@
+*.LST
+*.d
+*.lst
+*.__i
+*.lnp
+*.plg
+*.dep
+*.elf
+*.ArJo
+bin
+*.bak
+*.hex
