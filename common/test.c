@@ -127,15 +127,11 @@ static void task1(void *arg)
 
   testInitIO();
 
-#if POSCFG_MAX_TASKS >= 4
-  task = posTaskCreate(task2, NULL, 5, TEST_STACK_SIZE);
+  task = posTaskCreate(task2, NULL, POSCFG_MAX_PRIO_LEVEL - 2, TEST_STACK_SIZE);
   POS_SETTASKNAME(task, "task2");
-#endif
 
-#if POSCFG_MAX_TASKS >= 3
-  task = posTaskCreate(task3, NULL, 15, TEST_STACK_SIZE);
+  task = posTaskCreate(task3, NULL, POSCFG_MAX_PRIO_LEVEL - 1, TEST_STACK_SIZE);
   POS_SETTASKNAME(task, "task3");
-#endif
 
   while (true) {
 

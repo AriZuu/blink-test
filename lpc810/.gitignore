@@ -1,0 +1,15 @@
+*.LST
+*.d
+*.lst
+*.__i
+*.lnp
+*.plg
+*.dep
+*.elf
+cortextest.uvgui.ArJo
+bin
+/test-lpc1114.uvgui.ArJo
+/test-lpc1114_uvopt.bak
+/test-lpc1114_uvproj.bak
+/test-lpc1114.uvgui_ArJo.bak
+/test.hex
