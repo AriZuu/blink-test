@@ -103,7 +103,7 @@ void testInitIO()
   GPIOSetDir(2, 6, 1);
   GPIOSetDir(2, 7, 1);
 
-  posTaskCreate(runningLightTask, NULL, 5, 400);
+ // posTaskCreate(runningLightTask, NULL, 5, 400);
 }
 
 int main(int argc, char **argv)
