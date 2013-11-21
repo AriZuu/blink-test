@@ -531,7 +531,7 @@
  *  ADDITIONAL USER SETTINGS FOR THE ARM PORT
  *-------------------------------------------------------------------------*/
 
-#define PORTCFG_IRQ_STACK_SIZE 350
+#define PORTCFG_IRQ_STACK_SIZE 250
 #define PORTCFG_VECTORS 0
 #define PORTCFG_CON_LPC 0
 #endif /* _POSCFG_H */

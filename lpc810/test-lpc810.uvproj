@@ -12,14 +12,14 @@
       <ToolsetName>ARM-GNU</ToolsetName>
       <TargetOption>
         <TargetCommonOption>
-          <Device>LPC810</Device>
+          <Device>LPC810M021</Device>
           <Vendor>NXP (founded by Philips)</Vendor>
-          <Cpu>IRAM(0x10000000-0x10000FFF) IROM(0-0x7FFF) CLOCK(12000000) CPUTYPE("Cortex-M0")</Cpu>
+          <Cpu>IROM(0x00000000,0x1000) IRAM(0x10000000,0x0400) CPUTYPE("Cortex-M0+") CLOCK(30000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
-          <StartupFile>"STARTUP\NXP\LPC11xx\startup_LPC11xx.s" ("NXP LPC11xx Startup Code")</StartupFile>
-          <FlashDriverDll>UL2CM3(-O4303 -S0 -C0 -FO7 -FD10000000 -FC800 -FN1 -FF0LPC1xxx_32 -FS00 -FL08000)</FlashDriverDll>
-          <DeviceId>6526</DeviceId>
-          <RegisterFile>LPC11xx.h</RegisterFile>
+          <StartupFile></StartupFile>
+          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD10000000 -FC400 -FN1 -FF0LPC8xx_4 -FS00 -FL01000 -FP0($$Device:LPC810M021$Flash\LPC8xx_4.flm))</FlashDriverDll>
+          <DeviceId>6710</DeviceId>
+          <RegisterFile>$$Device:LPC810M021$Device\Include\LPC8xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
           <Asm></Asm>
@@ -29,14 +29,14 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>SFD\NXP\LPC11xx\LPC111x.sfr</SFDFile>
+          <SFDFile>$$Device:LPC810M021$SVD\LPC800.svd</SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
           <LibPath></LibPath>
-          <RegisterFilePath>NXP\LPC11xx\</RegisterFilePath>
-          <DBRegisterFilePath>NXP\LPC11xx\</DBRegisterFilePath>
+          <RegisterFilePath></RegisterFilePath>
+          <DBRegisterFilePath></DBRegisterFilePath>
           <TargetStatus>
             <Error>0</Error>
             <ExitCodeStop>0</ExitCodeStop>
@@ -102,13 +102,13 @@
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments></SimDllArguments>
-          <SimDlgDll>DARMP1.DLL</SimDlgDll>
-          <SimDlgDllArguments>-pLPC810</SimDlgDllArguments>
+          <SimDllArguments> </SimDllArguments>
+          <SimDlgDll>DCM.DLL</SimDlgDll>
+          <SimDlgDllArguments>-pCM0</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments></TargetDllArguments>
-          <TargetDlgDll>TARMP1.DLL</TargetDlgDll>
-          <TargetDlgDllArguments>-pLPC810</TargetDlgDllArguments>
+          <TargetDllArguments> </TargetDllArguments>
+          <TargetDlgDll>TCM.DLL</TargetDlgDll>
+          <TargetDlgDllArguments>-pCM0</TargetDlgDllArguments>
         </DllOption>
         <DebugOption>
           <OPTHX>
@@ -190,7 +190,7 @@
             <ldmm>1</ldmm>
             <ldXref>1</ldXref>
             <BigEnd>0</BigEnd>
-            <GCPUTYP>"Cortex-M0"</GCPUTYP>
+            <GCPUTYP>"Cortex-M0+"</GCPUTYP>
             <mOS>0</mOS>
             <uocRom>0</uocRom>
             <uocRam>0</uocRam>
@@ -235,12 +235,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x10000000</StartAddress>
-                <Size>0x1000</Size>
+                <Size>0x400</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
-                <Size>0x8000</Size>
+                <Size>0x1000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -249,8 +249,8 @@
               </XRAM>
               <IRAM2>
                 <Type>0</Type>
-                <StartAddress>0x0</StartAddress>
-                <Size>0x0</Size>
+                <StartAddress>0x2007c000</StartAddress>
+                <Size>0x4000</Size>
               </IRAM2>
               <IROM2>
                 <Type>0</Type>
@@ -266,14 +266,14 @@
             <interw>0</interw>
             <bigend>0</bigend>
             <Strict>0</Strict>
-            <Optim>0</Optim>
+            <Optim>4</Optim>
             <wLevel>2</wLevel>
             <uThumb>1</uThumb>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>POSNANO,_DBG,CORE_M0</Define>
+              <Define>POSNANO,_REL,CORE_M0PLUS</Define>
               <Undefine></Undefine>
-              <IncludePath>.;..\..\picoos\inc;..\..\picoos\ports\cortex-m;..\common;..\..\picoos-micro;..\..\cmsis-collection\lpc11cxx\inc</IncludePath>
+              <IncludePath>.;..\..\picoos\inc;..\..\picoos\ports\cortex-m;..\common;..\..\picoos-micro;..\..\cmsis-ports\lpc8xx\inc</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -396,50 +396,30 @@
               <FileType>5</FileType>
               <FilePath>..\..\picoos\ports\cortex-m\port.h</FilePath>
             </File>
-            <File>
-              <FileName>con_lpc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\picoos\ports\cortex-m\con_lpc.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>New Group</GroupName>
           <Files>
             <File>
-              <FileName>gpio_11xx_2.c</FileName>
+              <FileName>chip_8xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\gpio_11xx_2.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc8xx\src\chip_8xx.c</FilePath>
             </File>
             <File>
-              <FileName>sysinit_11xx.c</FileName>
+              <FileName>sysinit_8xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\sysinit_11xx.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc8xx\src\sysinit_8xx.c</FilePath>
             </File>
             <File>
-              <FileName>sysctl_11xx.c</FileName>
+              <FileName>syscon_8xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\sysctl_11xx.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc8xx\src\syscon_8xx.c</FilePath>
             </File>
             <File>
-              <FileName>clock_11xx.c</FileName>
+              <FileName>clock_8xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\clock_11xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>chip_11xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\chip_11xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>uart_11xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\uart_11xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>ring_buffer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\ring_buffer.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc8xx\src\clock_8xx.c</FilePath>
             </File>
           </Files>
         </Group>
