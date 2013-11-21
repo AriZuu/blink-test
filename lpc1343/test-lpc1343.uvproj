@@ -409,12 +409,12 @@
             <File>
               <FileName>core_cm3.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc13xx\src\core_cm3.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc13xx\src\core_cm3.c</FilePath>
             </File>
             <File>
               <FileName>system_LPC13xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc13xx\src\system_LPC13xx.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc13xx\src\system_LPC13xx.c</FilePath>
             </File>
           </Files>
         </Group>

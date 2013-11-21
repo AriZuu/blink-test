@@ -273,7 +273,7 @@
               <MiscControls></MiscControls>
               <Define>POSNANO,_DBG,CORE_M0</Define>
               <Undefine></Undefine>
-              <IncludePath>.;..\..\picoos\inc;..\..\picoos\ports\cortex-m;..\common;..\..\picoos-micro;..\..\cmsis-collection\lpc11cxx\inc</IncludePath>
+              <IncludePath>.;..\..\picoos\inc;..\..\picoos\ports\cortex-m;..\common;..\..\picoos-micro;..\..\cmsis-ports\lpc11cxx\inc</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -409,37 +409,37 @@
             <File>
               <FileName>gpio_11xx_2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\gpio_11xx_2.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc11cxx\src\gpio_11xx_2.c</FilePath>
             </File>
             <File>
               <FileName>sysinit_11xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\sysinit_11xx.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc11cxx\src\sysinit_11xx.c</FilePath>
             </File>
             <File>
               <FileName>sysctl_11xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\sysctl_11xx.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc11cxx\src\sysctl_11xx.c</FilePath>
             </File>
             <File>
               <FileName>clock_11xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\clock_11xx.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc11cxx\src\clock_11xx.c</FilePath>
             </File>
             <File>
               <FileName>chip_11xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\chip_11xx.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc11cxx\src\chip_11xx.c</FilePath>
             </File>
             <File>
               <FileName>uart_11xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\uart_11xx.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc11cxx\src\uart_11xx.c</FilePath>
             </File>
             <File>
               <FileName>ring_buffer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\cmsis-collection\lpc11cxx\src\ring_buffer.c</FilePath>
+              <FilePath>..\..\cmsis-ports\lpc11cxx\src\ring_buffer.c</FilePath>
             </File>
           </Files>
         </Group>
