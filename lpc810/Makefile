@@ -51,13 +51,13 @@ EXTRA_CFLAGS=-fdata-sections
 export EXTRA_CFLAGS
 
 # CMSIS setup
-CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-collection/lpc8xx/inc
+CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-ports/lpc8xx/inc
 CMSIS_DEFINES=CORE_M0PLUS
 export CMSIS_INCLUDES CMSIS_DEFINES
 
 DIR_CONFIG = $(CURRENTDIR)
 DIR_OUTPUT = $(CURRENTDIR)/bin
-MODULES +=  ../../cmsis-collection/lpc8xx ../../picoos-micro
+MODULES +=  ../../cmsis-ports/lpc8xx ../../picoos-micro
 
 POSTLINK1 = arm-none-eabi-size $(TARGETOUT)
 POSTLINK2 = arm-none-eabi-objcopy -O ihex $(TARGETOUT) $(TARGET).hex

@@ -48,13 +48,13 @@ CDEFINES +=
 DIR_USRINC +=	../common ../../picoos-micro
 
 # CMSIS setup
-CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-collection/lpc11cxx/inc
+CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-ports/lpc11cxx/inc
 CMSIS_DEFINES=CORE_M0
 export CMSIS_INCLUDES CMSIS_DEFINES
 
 DIR_CONFIG = $(CURRENTDIR)
 DIR_OUTPUT = $(CURRENTDIR)/bin
-MODULES +=  ../../cmsis-collection/lpc11cxx ../../picoos-micro
+MODULES +=  ../../cmsis-ports/lpc11cxx ../../picoos-micro
 
 POSTLINK1 = arm-none-eabi-size $(TARGETOUT)
 POSTLINK2 = arm-none-eabi-objcopy -O ihex $(TARGETOUT) $(TARGET).hex

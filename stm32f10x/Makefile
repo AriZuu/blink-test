@@ -47,14 +47,14 @@ SRC_LIB =
 DIR_USRINC +=	../common ../../picoos-micro
 
 # CMSIS setup
-CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-collection/stm32f10x/inc
+CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-ports/stm32f10x/inc
 CMSIS_DEFINES=STM32F10X_MD USE_STDPERIPH_DRIVER
 export CMSIS_DEFINES
 export CMSIS_INCLUDES
 
 DIR_CONFIG = $(CURRENTDIR)
 DIR_OUTPUT = $(CURRENTDIR)/bin
-MODULES += ../../cmsis-collection/stm32f10x ../../picoos-micro
+MODULES += ../../cmsis-ports/stm32f10x ../../picoos-micro
 
 POSTLINK1 = arm-none-eabi-size $(TARGETOUT)
 
