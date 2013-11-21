@@ -35,7 +35,10 @@ void SystemInit(void)
 	#if 0
   Chip_SystemInit();
   SystemCoreClockUpdate();
+	#else
+	SystemCoreClock = 12000000;
 	#endif
+	
 }
 
 const uint32_t OscRateIn = 0; //12000000;

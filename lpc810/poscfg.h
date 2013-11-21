@@ -303,7 +303,7 @@
 #ifdef _DBG
 #define POSCFG_ARGCHECK          2
 #else
-#define POSCFG_ARGCHECK          1
+#define POSCFG_ARGCHECK          2
 #endif
 
 /** @} */
