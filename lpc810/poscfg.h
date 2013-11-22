@@ -60,7 +60,7 @@
  * For the round robin scheduler, the maximum count is equal to ::MVAR_BITS.
  * For the standard scheduler, the maximum count cannot exceed ::MVAR_BITS ^ 2.
  */
-#define POSCFG_MAX_PRIO_LEVEL   2
+#define POSCFG_MAX_PRIO_LEVEL   3
 
 /** Maximum number of allowed tasks per priority level.
  * If the standard scheduler is used, this define automatically
@@ -86,7 +86,7 @@
  * dynamically allocate memory for additional task structures if the volume
  * of tasks defined by ::POSCFG_MAX_TASKS is exhausted.
  */
-#define POSCFG_MAX_TASKS       2
+#define POSCFG_MAX_TASKS       3
 
 /** Maximum count of events.
  * This define sets the maximum count of event data structures which can be

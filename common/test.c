@@ -130,9 +130,12 @@ static void task1(void *arg)
   task = posTaskCreate(task2, NULL, POSCFG_MAX_PRIO_LEVEL - 2, TEST_STACK_SIZE);
   POS_SETTASKNAME(task, "task2");
 
-  task = posTaskCreate(task3, NULL, POSCFG_MAX_PRIO_LEVEL - 1, TEST_STACK_SIZE);
-  POS_SETTASKNAME(task, "task3");
-
+  if (sema != NULL) {
+    
+    task = posTaskCreate(task3, NULL, POSCFG_MAX_PRIO_LEVEL - 1, TEST_STACK_SIZE);
+    POS_SETTASKNAME(task, "task3");
+  }
+  
   while (true) {
 
     testLedSet(Green, false);
@@ -145,7 +148,8 @@ static void task1(void *arg)
 
     testLedSet(Green, true);
 #if POSCFG_MAX_TASKS >= 3
-    posSemaSignal(sema);
+    if (sema != NULL)
+      posSemaSignal(sema);
 #endif
     spinUntil = jiffies + MS(5000);
     while (!POS_TIMEAFTER(jiffies, spinUntil));
