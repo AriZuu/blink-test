@@ -32,38 +32,37 @@
 #include <stdbool.h>
 #include "test.h"
 
-#define LED1_PORT 0      // Port for led#define LED2_PORT 0#define LED3_PORT 0
+#define LED1_PORT 0      // Port for led
+#define LED2_PORT 0
 
-#define LED1_BIT 2       // Bit on port for led#define LED2_BIT 3       // Bit on port for led#define LED3_BIT 8
-#define LED_ON 1        // Level to set port to turn on led#define LED_OFF 0       // Level to set port to turn off ledvoid testLedSet(LED_t led, bool on)
+#define LED1_BIT 2       // Bit on port for led
+#define LED2_BIT 3       // Bit on port for led
+#define LED_ON 1        // Level to set port to turn on led
+#define LED_OFF 0       // Level to set port to turn off led
+
+void testLedSet(LED_t led, bool on)
 {
-#if 0
   switch (led)
   {
   case Red:
-    Chip_GPIO_SetPinState(LPC_GPIO, LED1_PORT, LED1_BIT, on);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED1_PORT, LED1_BIT, on);
     break;
 
   case Green:
-    Chip_GPIO_SetPinState(LPC_GPIO, LED2_PORT, LED2_BIT, on);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED2_PORT, LED2_BIT, on);
     break;
 
   case Yellow:
-    Chip_GPIO_SetPinState(LPC_GPIO, LED3_PORT, LED3_BIT, on);
     break;
 
   }
-#endif
 }
 
 void testInitIO()
 {
-#if 0
-  Chip_GPIO_Init(LPC_GPIO);
-  Chip_GPIO_SetPinDIROutput(LPC_GPIO, LED1_PORT, LED1_BIT);
-  Chip_GPIO_SetPinDIROutput(LPC_GPIO, LED2_PORT, LED2_BIT);
-  Chip_GPIO_SetPinDIROutput(LPC_GPIO, LED3_PORT, LED3_BIT);
-#endif
+  Chip_GPIO_Init(LPC_GPIO_PORT);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED1_PORT, LED1_BIT);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED2_PORT, LED2_BIT);
 }
 
 int main(int argc, char **argv)

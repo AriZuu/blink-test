@@ -35,6 +35,9 @@
 #include "test.h"
 #include "testcfg.h"
 
+
+#if POSCFG_FEATURE_SEMAPHORES == 1
+
 static POSSEMA_t sema;
 
 static void task3(void *arg)
@@ -72,6 +75,7 @@ static void task3(void *arg)
     }
   }
 }
+#endif
 
 static void task2(void *arg)
 {
@@ -121,7 +125,7 @@ static void task1(void *arg)
   nosPrint("task1 start\n");
 #endif
 
-#if POSCFG_MAX_TASKS >= 3
+#if POSCFG_MAX_TASKS >= 3 && POSCFG_FEATURE_SEMAPHORES == 1
   sema = posSemaCreate(0);
 #endif
 
@@ -130,11 +134,13 @@ static void task1(void *arg)
   task = posTaskCreate(task2, NULL, POSCFG_MAX_PRIO_LEVEL - 2, TEST_STACK_SIZE);
   POS_SETTASKNAME(task, "task2");
 
+#if POSCFG_FEATURE_SEMAPHORES == 1
   if (sema != NULL) {
     
     task = posTaskCreate(task3, NULL, POSCFG_MAX_PRIO_LEVEL - 1, TEST_STACK_SIZE);
     POS_SETTASKNAME(task, "task3");
   }
+#endif
   
   while (true) {
 
@@ -147,7 +153,7 @@ static void task1(void *arg)
 #endif
 
     testLedSet(Green, true);
-#if POSCFG_MAX_TASKS >= 3
+#if POSCFG_MAX_TASKS >= 3 && POSCFG_FEATURE_SEMAPHORES == 1
     if (sema != NULL)
       posSemaSignal(sema);
 #endif

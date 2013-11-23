@@ -353,7 +353,7 @@
  * If this definition is set to 1, the semaphore functions are
  * added to the user API.
  */
-#define POSCFG_FEATURE_SEMAPHORES    1
+#define POSCFG_FEATURE_SEMAPHORES    0
 
 /** Include function ::posSemaDestroy.
  * If this definition is set to 1, the function ::posSemaDestroy will
