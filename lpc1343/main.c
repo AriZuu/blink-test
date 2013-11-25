@@ -103,11 +103,18 @@ void testInitIO()
   GPIOSetDir(2, 6, 1);
   GPIOSetDir(2, 7, 1);
 
- // posTaskCreate(runningLightTask, NULL, 5, 400);
+  posTaskCreate(runningLightTask, NULL, 5, 400);
 }
 
 int main(int argc, char **argv)
 {
+#if PORTCFG_CONOUT_ITM == 1
+  LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6); // GPIO Clock
+  LPC_SYSCON->SYSAHBCLKCTRL |= (1<<16); // IOCON Clock
+  LPC_SYSCON->TRACECLKDIV = 1; // Trace clock
+  LPC_IOCON->PIO0_9 = 3; // Enable SWO on PIO0.9
+
+#endif
   testStart();
   return 0;
 }

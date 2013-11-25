@@ -34,7 +34,7 @@ PORT = cortex-m
 CORTEX = m3
 export CORTEX
 
-BUILD = RELEASE
+BUILD = DEBUG
 LD_SCRIPTS=lpc1343.ld
 
 include $(RELROOT)make/common.mak
@@ -58,7 +58,7 @@ MODULES +=  ../../cmsis-ports/lpc13xx ../../picoos-micro
 
 POSTLINK1 = arm-none-eabi-size $(TARGETOUT)
 POSTLINK2 = arm-none-eabi-objcopy -O binary $(TARGETOUT) $(TARGET).bin
-POSTLINK3 = lpc-checksum $(TARGET).bin
+POSTLINK3 = #lpc-checksum $(TARGET).bin
 
 # ---------------------------------------------------------------------------
 # BUILD THE EXECUTABLE

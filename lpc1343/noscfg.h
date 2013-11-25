@@ -232,7 +232,7 @@ extern void *__heap_end;
  * @note  The platform port must support console output, it must
  *        export the function ::p_putchar.
  */
-#define NOSCFG_FEATURE_CONOUT        0
+#define NOSCFG_FEATURE_CONOUT        1
 
 /** Enable generic printf functions.
  * The nano layer supports a set of realy generic printf functions.
@@ -358,5 +358,6 @@ extern void *__heap_end;
 
 #define PORTCFG_CONSOLE_SPEED		     115200
 #define NOSCFG_FEATURE_USE_STDARG 1
+#define PORTCFG_CONOUT_ITM 1
 
 #endif /* _NOSCFG_H */
