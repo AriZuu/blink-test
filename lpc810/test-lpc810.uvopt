@@ -190,10 +190,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>6</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>60</TopLine>
-      <CurrentLine>80</CurrentLine>
+      <TopLine>62</TopLine>
+      <CurrentLine>78</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -256,8 +256,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>83</TopLine>
-      <CurrentLine>88</CurrentLine>
+      <TopLine>154</TopLine>
+      <CurrentLine>161</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>../common/test.c</PathWithFileName>
       <FilenameWithoutPath>test.c</FilenameWithoutPath>
@@ -302,10 +302,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>29</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>35</TopLine>
-      <CurrentLine>39</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\sysinit.c</PathWithFileName>
       <FilenameWithoutPath>sysinit.c</FilenameWithoutPath>
@@ -328,8 +328,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>490</TopLine>
+      <CurrentLine>504</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>../../picoos/src/pico/fbit_gen.c</PathWithFileName>
       <FilenameWithoutPath>fbit_gen.c</FilenameWithoutPath>
@@ -440,7 +440,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>466</TopLine>
+      <TopLine>464</TopLine>
       <CurrentLine>467</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>../../picoos/ports/cortex-m/arch_c.c</PathWithFileName>
@@ -510,10 +510,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>46</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>75</TopLine>
-      <CurrentLine>100</CurrentLine>
+      <CurrentLine>95</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\cmsis-ports\lpc8xx\src\syscon_8xx.c</PathWithFileName>
       <FilenameWithoutPath>syscon_8xx.c</FilenameWithoutPath>

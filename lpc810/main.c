@@ -45,14 +45,14 @@ void testLedSet(LED_t led, bool on)
   switch (led)
   {
   case Red:
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED1_PORT, LED1_BIT, on);
     break;
 
   case Green:
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED2_PORT, LED2_BIT, on);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED2_PORT, LED1_BIT, on);
     break;
 
   case Yellow:
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED1_PORT, LED2_BIT, on);
     break;
 
   }
@@ -60,6 +60,9 @@ void testLedSet(LED_t led, bool on)
 
 void testInitIO()
 {
+  Chip_SWM_DisableFixedPin(SWM_FIXED_SWCLK);
+  Chip_SWM_DisableFixedPin(SWM_FIXED_SWDIO);
+
   Chip_GPIO_Init(LPC_GPIO_PORT);
   Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED1_PORT, LED1_BIT);
   Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED2_PORT, LED2_BIT);
@@ -67,11 +70,6 @@ void testInitIO()
 
 int main(int argc, char **argv)
 {
-#if 0
-  Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_6, (IOCON_FUNC1 | IOCON_MODE_INACT));/* RXD */
-  Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_7, (IOCON_FUNC1 | IOCON_MODE_INACT));/* TXD */
-#endif
-
   testStart();
   return 0;
 }
