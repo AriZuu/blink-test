@@ -131,9 +131,6 @@ static void task1(void *arg)
 
   testInitIO();
 
-  task = posTaskCreate(task2, NULL, POSCFG_MAX_PRIO_LEVEL - 2, TEST_STACK_SIZE);
-  POS_SETTASKNAME(task, "task2");
-
 #if POSCFG_FEATURE_SEMAPHORES == 1
   if (sema != NULL) {
     
@@ -142,6 +139,9 @@ static void task1(void *arg)
   }
 #endif
   
+  task = posTaskCreate(task2, NULL, POSCFG_MAX_PRIO_LEVEL - 2, TEST_STACK_SIZE);
+  POS_SETTASKNAME(task, "task2");
+
   while (true) {
 
     testLedSet(Green, false);
