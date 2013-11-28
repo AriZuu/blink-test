@@ -42,9 +42,11 @@
 
 void testLedSet(LED_t led, bool on)
 {
+#ifndef FAKE
   switch (led)
   {
   case Red:
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED1_PORT, LED2_BIT, on);
     break;
 
   case Green:
@@ -52,20 +54,22 @@ void testLedSet(LED_t led, bool on)
     break;
 
   case Yellow:
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED1_PORT, LED2_BIT, on);
     break;
 
   }
+#endif
 }
 
 void testInitIO()
 {
+#ifndef FAKE
   Chip_SWM_DisableFixedPin(SWM_FIXED_SWCLK);
   Chip_SWM_DisableFixedPin(SWM_FIXED_SWDIO);
 
   Chip_GPIO_Init(LPC_GPIO_PORT);
   Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED1_PORT, LED1_BIT);
   Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED2_PORT, LED2_BIT);
+#endif
 }
 
 int main(int argc, char **argv)

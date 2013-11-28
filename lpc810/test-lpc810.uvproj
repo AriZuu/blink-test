@@ -271,7 +271,7 @@
             <uThumb>1</uThumb>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>POSNANO,_REL,CORE_M0PLUS</Define>
+              <Define>POSNANO,_REL,CORE_M0PLUS,FAKE</Define>
               <Undefine></Undefine>
               <IncludePath>.;..\..\picoos\inc;..\..\picoos\ports\cortex-m;..\common;..\..\picoos-micro;..\..\cmsis-ports\lpc8xx\inc</IncludePath>
             </VariousControls>
@@ -420,6 +420,11 @@
               <FileName>clock_8xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\cmsis-ports\lpc8xx\src\clock_8xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio_8xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\cmsis-ports\lpc8xx\src\gpio_8xx.c</FilePath>
             </File>
           </Files>
         </Group>
