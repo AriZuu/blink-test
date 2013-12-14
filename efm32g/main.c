@@ -33,6 +33,7 @@
 #include <em_chip.h>
 #include <em_cmu.h>
 #include <em_gpio.h>
+#include <em_dbg.h>
 #include "test.h"
 
 #define LED1_PORT 0      // Port for led
@@ -86,6 +87,13 @@ int main(int argc, char **argv)
  * Initalize chip.
  */
   CHIP_Init();
+
+#if PORTCFG_CONOUT_ITM == 1
+#ifdef _DBG
+  if (DBG_Connected())
+    DBG_SWOEnable(0);
+#endif
+#endif
 
 /* 
  * Use XT oscillator, disable internal RC osc.
