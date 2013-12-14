@@ -51,9 +51,9 @@ void testLedSet(LED_t led, bool on)
   {
   case Red:
     if (on)
-      GPIO_PinOutSet(gpioPortA, 0);
-    else
       GPIO_PinOutClear(gpioPortA, 0);
+    else
+      GPIO_PinOutSet(gpioPortA, 0);
     break;
 
   case Green:
@@ -66,51 +66,22 @@ void testLedSet(LED_t led, bool on)
 
 void testInitIO()
 {
-#if 0
-  Chip_GPIO_Init(LPC_GPIO);
-  Chip_GPIO_SetPinDIROutput(LPC_GPIO, LED1_PORT, LED1_BIT);
-  Chip_GPIO_SetPinDIROutput(LPC_GPIO, LED2_PORT, LED2_BIT);
-  Chip_GPIO_SetPinDIROutput(LPC_GPIO, LED3_PORT, LED3_BIT);
-#endif
   CMU_ClockEnable(cmuClock_GPIO, true);
 
 /*
  * Button.
  */
-#if 0
-        /* Configure button PA1, as input with pull up */
-        cmu->HFPERCLKEN0 |= CMU_HFPERCLKEN0_GPIO; // turn on clock
-        gpio->P[0].MODEL &= ~(_GPIO_P_MODEL_MODE1_MASK);
-        gpio->P[0].MODEL |= GPIO_P_MODEL_MODE1_INPUTPULLFILTER;
-        gpio->P[0].DOUT |= (1 << 1);
-
-#endif
   GPIO_PinModeSet(gpioPortA, 1, gpioModeInputPullFilter, 0); 
 
 /*
  * Led.
  */
-#if 0
-        /* enable LEDs PA0*/
-        gpio->P[0].MODEL &= ~(_GPIO_P_MODEL_MODE0_MASK);
-        gpio->P[0].MODEL |= GPIO_P_MODEL_MODE0_PUSHPULLDRIVE;
-        gpio->P[0].DOUT &= ~(1 << 0);
-        
-        gpio->P[0].CTRL = 0x2; // 20mA outputs
-
-#endif
-
   GPIO_PinModeSet(gpioPortA, 0, gpioModePushPullDrive, 0);
   GPIO_DriveModeSet(gpioPortA, gpioDriveModeHigh);
 }
 
 int main(int argc, char **argv)
 {
-#if 0
-  Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_6, (IOCON_FUNC1 | IOCON_MODE_INACT));/* RXD */
-  Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO1_7, (IOCON_FUNC1 | IOCON_MODE_INACT));/* TXD */
-#endif
-
 /*
  * Initalize chip.
  */
