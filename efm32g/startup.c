@@ -41,6 +41,38 @@ void Default_Handler()
 
 extern unsigned int __stack[];
 
+PORT_WEAK_HANDLER(SysTick_Handler);
+PORT_WEAK_HANDLER(DMA_IRQHandler);
+PORT_WEAK_HANDLER(GPIO_EVEN_IRQHandler);
+PORT_WEAK_HANDLER(TIMER0_IRQHandler);
+PORT_WEAK_HANDLER(USART0_RX_IRQHandler);
+PORT_WEAK_HANDLER(USART0_TX_IRQHandler);
+PORT_WEAK_HANDLER(ACMP0_IRQHandler);
+PORT_WEAK_HANDLER(ADC0_IRQHandler);
+PORT_WEAK_HANDLER(DAC0_IRQHandler);
+PORT_WEAK_HANDLER(I2C0_IRQHandler);
+PORT_WEAK_HANDLER(GPIO_ODD_IRQHandler);
+PORT_WEAK_HANDLER(TIMER1_IRQHandler);
+PORT_WEAK_HANDLER(TIMER2_IRQHandler);
+PORT_WEAK_HANDLER(USART1_RX_IRQHandler);
+PORT_WEAK_HANDLER(USART1_TX_IRQHandler);
+PORT_WEAK_HANDLER(USART2_RX_IRQHandler);
+PORT_WEAK_HANDLER(USART2_TX_IRQHandler);
+PORT_WEAK_HANDLER(UART0_RX_IRQHandler);
+PORT_WEAK_HANDLER(UART0_TX_IRQHandler);
+PORT_WEAK_HANDLER(LEUART0_IRQHandler);
+PORT_WEAK_HANDLER(LEUART1_IRQHandler);
+PORT_WEAK_HANDLER(LETIMER0_IRQHandler);
+PORT_WEAK_HANDLER(PCNT0_IRQHandler);
+PORT_WEAK_HANDLER(PCNT1_IRQHandler);
+PORT_WEAK_HANDLER(PCNT2_IRQHandler);
+PORT_WEAK_HANDLER(RTC_IRQHandler);
+PORT_WEAK_HANDLER(CMU_IRQHandler);
+PORT_WEAK_HANDLER(VCMP_IRQHandler);
+PORT_WEAK_HANDLER(LCD_IRQHandler);
+PORT_WEAK_HANDLER(MSC_IRQHandler);
+PORT_WEAK_HANDLER(AES_IRQHandler);
+
 PortExcHandlerFunc vectorTable[] __attribute__ ((section(".vectors"))) =
 { (PortExcHandlerFunc) __stack,        // stack pointer
     Reset_Handler,                     // code entry point
@@ -59,35 +91,35 @@ PortExcHandlerFunc vectorTable[] __attribute__ ((section(".vectors"))) =
     PendSV_Handler,                    // Context switch
     SysTick_Handler,
 // EFM32 handlers
-    Default_Handler,                   // DMA_IRQHandler    
-    Default_Handler,                   // GPIO_EVEN_IRQHandler    
-    Default_Handler,                   // TIMER0_IRQHandler    
-    Default_Handler,                   // USART0_RX_IRQHandler    
-    Default_Handler,                   // USART0_TX_IRQHandler    
-    Default_Handler,                   // ACMP0_IRQHandler    
-    Default_Handler,                   // ADC0_IRQHandler    
-    Default_Handler,                   // DAC0_IRQHandler    
-    Default_Handler,                   // I2C0_IRQHandler    
-    Default_Handler,                   // GPIO_ODD_IRQHandler    
-    Default_Handler,                   // TIMER1_IRQHandler    
-    Default_Handler,                   // TIMER2_IRQHandler    
-    Default_Handler,                   // USART1_RX_IRQHandler    
-    Default_Handler,                   // USART1_TX_IRQHandler    
-    Default_Handler,                   // USART2_RX_IRQHandler    
-    Default_Handler,                   // USART2_TX_IRQHandler    
-    Default_Handler,                   // UART0_RX_IRQHandler    
-    Default_Handler,                   // UART0_TX_IRQHandler    
-    Default_Handler,                   // LEUART0_IRQHandler    
-    Default_Handler,                   // LEUART1_IRQHandler    
-    Default_Handler,                   // LETIMER0_IRQHandler    
-    Default_Handler,                   // PCNT0_IRQHandler    
-    Default_Handler,                   // PCNT1_IRQHandler    
-    Default_Handler,                   // PCNT2_IRQHandler    
-    Default_Handler,                   // RTC_IRQHandler    
-    Default_Handler,                   // CMU_IRQHandler    
-    Default_Handler,                   // VCMP_IRQHandler    
-    Default_Handler,                   // LCD_IRQHandler    
-    Default_Handler,                   // MSC_IRQHandler    
-    Default_Handler,                   // AES_IRQHandler    
+    DMA_IRQHandler,
+    GPIO_EVEN_IRQHandler,
+    TIMER0_IRQHandler,
+    USART0_RX_IRQHandler,
+    USART0_TX_IRQHandler,
+    ACMP0_IRQHandler,
+    ADC0_IRQHandler,
+    DAC0_IRQHandler,
+    I2C0_IRQHandler,
+    GPIO_ODD_IRQHandler,
+    TIMER1_IRQHandler,
+    TIMER2_IRQHandler,
+    USART1_RX_IRQHandler,
+    USART1_TX_IRQHandler,
+    USART2_RX_IRQHandler,
+    USART2_TX_IRQHandler,
+    UART0_RX_IRQHandler,
+    UART0_TX_IRQHandler,
+    LEUART0_IRQHandler,
+    LEUART1_IRQHandler,
+    LETIMER0_IRQHandler,
+    PCNT0_IRQHandler,
+    PCNT1_IRQHandler,
+    PCNT2_IRQHandler,
+    RTC_IRQHandler,
+    CMU_IRQHandler,
+    VCMP_IRQHandler,
+    LCD_IRQHandler,
+    MSC_IRQHandler,
+    AES_IRQHandler
  };
 
