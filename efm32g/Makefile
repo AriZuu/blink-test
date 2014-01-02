@@ -30,6 +30,7 @@
 RELROOT = ../../picoos/
 
 PORT = cortex-m
+CPU=efm32
 CORTEX = m3
 export CORTEX
 
