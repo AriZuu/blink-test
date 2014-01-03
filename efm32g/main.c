@@ -123,6 +123,17 @@ int main(int argc, char **argv)
 #endif
 #endif
 
+#if PORTCFG_CON_USART == 1
+
+  // Configure usart pins.
+
+  CMU_ClockEnable(cmuClock_GPIO, true);
+
+  GPIO_PinModeSet(gpioPortC, 0, gpioModePushPull, 1);
+  GPIO_PinModeSet(gpioPortC, 1, gpioModeInput, 0);
+
+#endif
+
   testStart();
   return 0;
 }
