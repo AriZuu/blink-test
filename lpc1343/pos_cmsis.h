@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, Ari Suutari <ari@stonepile.fi>.
+ * Copyright (c) 2012-2014, Ari Suutari <ari@stonepile.fi>.
  * All rights reserved. 
  * 
  * Redistribution and use in source and binary forms, with or without
@@ -28,4 +28,5 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "LPC13xx.h"
+#include "chip.h"
+void SystemInit(void);

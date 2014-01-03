@@ -30,8 +30,6 @@
 
 #include <picoos.h>
 #include <stdbool.h>
-#include "driver_config.h"
-#include "gpio.h"
 #include "test.h"
 
 #define LED1_PORT 3      // Port for led
@@ -50,15 +48,15 @@ void testLedSet(LED_t led, bool on)
 {
   switch (led) {
   case Red:
-    GPIOSetValue(LED1_PORT, LED1_BIT, !on);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED1_PORT, LED1_BIT, !on);
     break;
 
   case Green:
-    GPIOSetValue(LED3_PORT, LED3_BIT, !on);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED3_PORT, LED3_BIT, !on);
     break;
 
   case Yellow:
-    GPIOSetValue(LED2_PORT, LED2_BIT, !on);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED2_PORT, LED2_BIT, !on);
     break;
 
   }
@@ -72,15 +70,15 @@ static void runningLightTask(void* arg)
 
     if (led == 0) {
 
-      GPIOSetValue(3, 3, 0);
+      Chip_GPIO_SetPinState(LPC_GPIO_PORT, 3, 3, 0);
       posTaskSleep(MS(100));
-      GPIOSetValue(3, 3, 1);
+      Chip_GPIO_SetPinState(LPC_GPIO_PORT, 3, 3, 1);
     }
     else {
 
-      GPIOSetValue(2, 3 + led, 0);
+      Chip_GPIO_SetPinState(LPC_GPIO_PORT, 2, 3 + led, 0);
       posTaskSleep(MS(100));
-      GPIOSetValue(2, 3 + led, 1);
+      Chip_GPIO_SetPinState(LPC_GPIO_PORT, 2, 3 + led, 1);
 
     }
 
@@ -92,16 +90,16 @@ static void runningLightTask(void* arg)
 
 void testInitIO()
 {
-  GPIOInit();
-  GPIOSetDir(LED1_PORT, LED1_BIT, 1);
-  GPIOSetDir(LED2_PORT, LED2_BIT, 1);
-  GPIOSetDir(LED3_PORT, LED3_BIT, 1);
+  Chip_GPIO_Init(LPC_GPIO_PORT);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED1_PORT, LED1_BIT);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED2_PORT, LED2_BIT);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, LED3_PORT, LED3_BIT);
 
-  GPIOSetDir(3, 3, 1);
-  GPIOSetDir(2, 4, 1);
-  GPIOSetDir(2, 5, 1);
-  GPIOSetDir(2, 6, 1);
-  GPIOSetDir(2, 7, 1);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 3, 3);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 2, 4);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 2, 5);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 2, 6);
+  Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 2, 7);
 
   posTaskCreate(runningLightTask, NULL, 5, 400);
 }
@@ -109,11 +107,18 @@ void testInitIO()
 int main(int argc, char **argv)
 {
 #if PORTCFG_CONOUT_ITM == 1
+  Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_GPIO);
+  Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_IOCON);
+  Chip_Clock_SetTraceClockDiv(1);
+  Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_9, IOCON_FUNC3);
+#warning check swd
+#if 0
   LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6); // GPIO Clock
   LPC_SYSCON->SYSAHBCLKCTRL |= (1<<16); // IOCON Clock
   LPC_SYSCON->TRACECLKDIV = 1; // Trace clock
   LPC_IOCON->PIO0_9 = 3; // Enable SWO on PIO0.9
 
+#endif
 #endif
   testStart();
   return 0;

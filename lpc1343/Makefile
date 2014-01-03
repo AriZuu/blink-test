@@ -41,7 +41,7 @@ include $(RELROOT)make/common.mak
 
 NANO = 1
 TARGET = test
-SRC_TXT =	../common/test.c ./main.c gpio.c
+SRC_TXT =	../common/test.c ./main.c sysinit.c
 SRC_HDR = 
 SRC_OBJ =
 SRC_LIB =
@@ -49,7 +49,8 @@ DIR_USRINC +=	../common ../../picoos-micro
 
 # CMSIS setup
 CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-ports/lpc13xx/inc
-export CMSIS_INCLUDES
+CMSIS_DEFINES=CORE_M3
+export CMSIS_DEFINES CMSIS_INCLUDES
 
 DIR_CONFIG = $(CURRENTDIR)
 DIR_OUTPUT = $(CURRENTDIR)/bin

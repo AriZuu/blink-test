@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, Ari Suutari <ari@stonepile.fi>.
+ * Copyright (c) 2006-2013, Ari Suutari <ari@stonepile.fi>.
  * All rights reserved. 
  * 
  * Redistribution and use in source and binary forms, with or without
@@ -28,10 +28,14 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef DRIVER_CONFIG_H_
-#define DRIVER_CONFIG_H
+#include <picoos.h>
 
-#include <LPC13xx.h>
-#define CONFIG_ENABLE_DRIVER_GPIO						1
+void SystemInit(void)
+{
+  Chip_SystemInit();
+  SystemCoreClockUpdate();
+}
 
-#endif
+const uint32_t OscRateIn = 0; //12000000;
+const uint32_t ExtRateIn = 0;
+
