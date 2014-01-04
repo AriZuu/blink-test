@@ -111,8 +111,7 @@ int main(int argc, char **argv)
   Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_IOCON);
   Chip_Clock_SetTraceClockDiv(1);
   Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_9, IOCON_FUNC3);
-#warning check swd
-#if 0
+#if OLD_INIT
   LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6); // GPIO Clock
   LPC_SYSCON->SYSAHBCLKCTRL |= (1<<16); // IOCON Clock
   LPC_SYSCON->TRACECLKDIV = 1; // Trace clock
