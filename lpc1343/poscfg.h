@@ -532,5 +532,5 @@
  *-------------------------------------------------------------------------*/
 
 #define PORTCFG_IRQ_STACK_SIZE 1024
-#define PORTCFG_CLOCK_SYSTICK 1
+#define PORTCFG_TICK_SYSTICK 1
 #endif /* _POSCFG_H */
