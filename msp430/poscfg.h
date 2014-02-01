@@ -539,17 +539,20 @@
 #define PORTCFG_XT1_HZ         32768
 #endif
 
+#ifdef __MSP430F2274__
+#define HZ 187
+#define PORTCFG_TICK_WDT 1
+#define PORTCFG_TICK_TIMER_A0 0
+#else
 #define HZ 100
-#ifdef __MSP430__
+#define PORTCFG_TICK_WDT 0
+#define PORTCFG_TICK_TIMER_A0 1
+#endif
 
 #if defined(_REL) || defined(SMALL_STACK)
 #define PORTCFG_IRQ_STACK_SIZE    74
 #else
 #define PORTCFG_IRQ_STACK_SIZE    110
-#endif
-
-#else
-#define PORTCFG_IRQ_STACK_SIZE		200
 #endif
 
 #endif /* _POSCFG_H */
