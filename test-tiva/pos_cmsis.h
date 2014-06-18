@@ -29,7 +29,7 @@
  */
 
 
-#include "tiva.h"
+#include "TIVA.h"
 
 /*
  * Undefine register address definitions that conflict with driverlib.

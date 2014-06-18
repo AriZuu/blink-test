@@ -27,7 +27,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 # OF THE POSSIBILITY OF SUCH DAMAGE.
 
-RELROOT = ../../git/picoos/
+RELROOT = ../../picoos/
 
 PORT = cortex-m
 CPU = stm32
@@ -41,21 +41,21 @@ include $(RELROOT)make/common.mak
 
 NANO = 1
 TARGET = test
-SRC_TXT =	../../git/blink-test/common/test.c ./main.c 
+SRC_TXT =	../common/test.c ./main.c 
 SRC_HDR = 
 SRC_OBJ =
 SRC_LIB =
-DIR_USRINC +=	../../git/blink-test/common ../../git/picoos-micro $(CURRENTDIR)/../../git/cmsis-ports/tiva/tivaware
+DIR_USRINC +=	../common ../../picoos-micro $(CURRENTDIR)/../../cmsis-ports/tiva/tivaware
 
 # CMSIS setup
-CMSIS_INCLUDES=$(CURRENTDIR)/../../git/cmsis-ports/tiva/inc 
+CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-ports/tiva/inc 
 CMSIS_DEFINES=TM4C123GH6PM
 export CMSIS_DEFINES
 export CMSIS_INCLUDES
 
 DIR_CONFIG = $(CURRENTDIR)
 DIR_OUTPUT = $(CURRENTDIR)/bin
-MODULES += ../../git/cmsis-ports/tiva ../../git/picoos-micro
+MODULES += ../../cmsis-ports/tiva ../../picoos-micro
 
 POSTLINK1 = arm-none-eabi-size $(TARGETOUT)
 
