@@ -37,8 +37,6 @@
  * which causes compiler to complain.
  */
 
-#warning Ti CMSIS kludgery here !!
-
 #undef DWT_BASE
 #undef ITM_BASE
 #undef NVIC_BASE
