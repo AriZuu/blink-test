@@ -521,7 +521,11 @@
  * may help you debugging your code using an in-circuit debugger
  * with appropriated IDE.
  */
+#ifdef _DBG
+#define POSCFG_FEATURE_DEBUGHELP     1
+#else
 #define POSCFG_FEATURE_DEBUGHELP     0
+#endif
 
 /** @} */
 
