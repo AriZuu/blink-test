@@ -534,4 +534,6 @@
 #define PORTCFG_CONOUT_ITM 1
 #define PORTCFG_CON_USART 0
 #define PORTCFG_TICK_SYSTICK 1
+#define PORTCFG_VECTORS 1
+
 #endif /* _POSCFG_H */

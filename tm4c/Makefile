@@ -41,7 +41,7 @@ include $(RELROOT)make/common.mak
 
 NANO = 1
 TARGET = test
-SRC_TXT =	../common/test.c ./main.c 
+SRC_TXT =	../common/test.c ./main.c startup.c
 SRC_HDR = 
 SRC_OBJ =
 SRC_LIB =
