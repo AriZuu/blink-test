@@ -99,3 +99,5 @@
 #undef SYSCTL_BASE
 #undef UDMA_BASE
 
+void UART0_Handler(void);
+

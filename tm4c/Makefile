@@ -45,11 +45,11 @@ SRC_TXT =	../common/test.c ./main.c startup.c
 SRC_HDR = 
 SRC_OBJ =
 SRC_LIB =
-DIR_USRINC +=	../common ../../picoos-micro $(CURRENTDIR)/../../cmsis-ports/tiva/tivaware
+DIR_USRINC +=	../common ../../picoos-micro 
 
 # CMSIS setup
-CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-ports/tiva/inc 
-CMSIS_DEFINES=TM4C123GH6PM
+CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-ports/tiva/tivaware $(CURRENTDIR)/../../cmsis-ports/tiva/inc 
+CMSIS_DEFINES=TM4C123GH6PM PART_TM4C123GH6PM gcc
 export CMSIS_DEFINES
 export CMSIS_INCLUDES
 
