@@ -95,9 +95,10 @@ int main(int argc, char **argv)
   CMU_OscillatorEnable(cmuOsc_HFRCO, false, false);
   SystemCoreClockUpdate();
 
-  // Allow deep sleep.
-
-  SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;    /* Configure Cortex-M for deep sleep  */
+#if PORTCFG_CON_USART == 0
+  // Allow deep sleep. Doesn't work well with uart console currently.
+  SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+#endif
 
 #if PORTCFG_CONOUT_ITM == 1
 #ifdef _DBG
