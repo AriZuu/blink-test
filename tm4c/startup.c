@@ -70,15 +70,15 @@ PORT_WEAK_HANDLER(UART0_Handler);
 PORT_WEAK_HANDLER(UART1_Handler);
 PORT_WEAK_HANDLER(SSI0_Handler);
 PORT_WEAK_HANDLER(I2C0_Handler);
-PORT_WEAK_HANDLER(PMW0_FAULT_Handler);
+PORT_WEAK_HANDLER(PWM0_Fault_Handler);
 PORT_WEAK_HANDLER(PWM0_0_Handler);
 PORT_WEAK_HANDLER(PWM0_1_Handler);
 PORT_WEAK_HANDLER(PWM0_2_Handler);
 PORT_WEAK_HANDLER(QEI0_Handler);
-PORT_WEAK_HANDLER(ADC0SS0_Handler);
-PORT_WEAK_HANDLER(ADC0SS1_Handler);
-PORT_WEAK_HANDLER(ADC0SS2_Handler);
-PORT_WEAK_HANDLER(ADC0SS3_Handler);
+PORT_WEAK_HANDLER(ADC0_S0_Handler);
+PORT_WEAK_HANDLER(ADC0_S1_Handler);
+PORT_WEAK_HANDLER(ADC0_S2_Handler);
+PORT_WEAK_HANDLER(ADC0_S3_Handler);
 PORT_WEAK_HANDLER(WDT0_Handler);
 PORT_WEAK_HANDLER(TIMER0A_Handler);
 PORT_WEAK_HANDLER(TIMER0B_Handler);
@@ -107,10 +107,10 @@ PORT_WEAK_HANDLER(USB0_Handler);
 PORT_WEAK_HANDLER(PWM0_3_Handler);
 PORT_WEAK_HANDLER(UDMA_Handler);
 PORT_WEAK_HANDLER(UDMAERR_Handler);
-PORT_WEAK_HANDLER(ADC1SS0_Handler);
-PORT_WEAK_HANDLER(ADC1SS1_Handler);
-PORT_WEAK_HANDLER(ADC1SS2_Handler);
-PORT_WEAK_HANDLER(ADC1SS3_Handler);
+PORT_WEAK_HANDLER(ADC1_S0_Handler);
+PORT_WEAK_HANDLER(ADC1_S1_Handler);
+PORT_WEAK_HANDLER(ADC1_S2_Handler);
+PORT_WEAK_HANDLER(ADC1_S3_Handler);
 PORT_WEAK_HANDLER(GPIOJ_Handler);
 PORT_WEAK_HANDLER(GPIOK_Handler);
 PORT_WEAK_HANDLER(GPIOL_Handler);
@@ -163,11 +163,11 @@ PORT_WEAK_HANDLER(GPIOQ6_Handler);
 PORT_WEAK_HANDLER(GPIOQ7_Handler);
 PORT_WEAK_HANDLER(GPIOR_Handler);
 PORT_WEAK_HANDLER(GPIOS_Handler);
-PORT_WEAK_HANDLER(PMW1_0_Handler);
+PORT_WEAK_HANDLER(PWM1_0_Handler);
 PORT_WEAK_HANDLER(PWM1_1_Handler);
 PORT_WEAK_HANDLER(PWM1_2_Handler);
 PORT_WEAK_HANDLER(PWM1_3_Handler);
-PORT_WEAK_HANDLER(PWM1_FAULT_Handler);
+PORT_WEAK_HANDLER(PWM1_Fault_Handler);
 
 PortExcHandlerFunc vectorTable[] __attribute__ ((section(".vectors"))) =
 { (PortExcHandlerFunc) __stack,        // stack pointer
@@ -186,7 +186,6 @@ PortExcHandlerFunc vectorTable[] __attribute__ ((section(".vectors"))) =
     0,                    // Reserved
     PendSV_Handler,       // Context switch
     SysTick_Handler,
-// tm4c handlers
     GPIOA_Handler,        // GPIO Port A
     GPIOB_Handler,        // GPIO Port B
     GPIOC_Handler,        // GPIO Port C
@@ -196,15 +195,15 @@ PortExcHandlerFunc vectorTable[] __attribute__ ((section(".vectors"))) =
     UART1_Handler,        // UART1 Rx and Tx
     SSI0_Handler,         // SSI0 Rx and Tx
     I2C0_Handler,         // I2C0 Master and Slave
-    PMW0_FAULT_Handler,   // PWM Fault
+    PWM0_Fault_Handler,   // PWM Fault
     PWM0_0_Handler,       // PWM Generator 0
     PWM0_1_Handler,       // PWM Generator 1
     PWM0_2_Handler,       // PWM Generator 2
     QEI0_Handler,         // Quadrature Encoder 0
-    ADC0SS0_Handler,      // ADC Sequence 0
-    ADC0SS1_Handler,      // ADC Sequence 1
-    ADC0SS2_Handler,      // ADC Sequence 2
-    ADC0SS3_Handler,      // ADC Sequence 3
+    ADC0_S0_Handler,      // ADC Sequence 0
+    ADC0_S1_Handler,      // ADC Sequence 1
+    ADC0_S2_Handler,      // ADC Sequence 2
+    ADC0_S3_Handler,      // ADC Sequence 3
     WDT0_Handler,         // Watchdog timer
     TIMER0A_Handler,      // Timer 0 subtimer A
     TIMER0B_Handler,      // Timer 0 subtimer B
@@ -228,19 +227,19 @@ PortExcHandlerFunc vectorTable[] __attribute__ ((section(".vectors"))) =
     QEI1_Handler,         // Quadrature Encoder 1
     CAN0_Handler,         // CAN0
     CAN1_Handler,         // CAN1
-    0,
-    0,
+    0,                    // Reserved
+    0,                    // Reserved
     HIB_Handler,          // Hibernate
     USB0_Handler,         // USB0
     PWM0_3_Handler,       // PWM Generator 3
     UDMA_Handler,         // uDMA Software Transfer
     UDMAERR_Handler,      // uDMA Error
-    ADC1SS0_Handler,      // ADC1 Sequence 0
-    ADC1SS1_Handler,      // ADC1 Sequence 1
-    ADC1SS2_Handler,      // ADC1 Sequence 2
-    ADC1SS3_Handler,      // ADC1 Sequence 3
-    0,
-    0,
+    ADC1_S0_Handler,      // ADC1 Sequence 0
+    ADC1_S1_Handler,      // ADC1 Sequence 1
+    ADC1_S2_Handler,      // ADC1 Sequence 2
+    ADC1_S3_Handler,      // ADC1 Sequence 3
+    0,                    // Reserved
+    0,                    // Reserved
     GPIOJ_Handler,        // GPIO Port J
     GPIOK_Handler,        // GPIO Port K
     GPIOL_Handler,        // GPIO Port L
@@ -251,34 +250,34 @@ PortExcHandlerFunc vectorTable[] __attribute__ ((section(".vectors"))) =
     UART5_Handler,        // UART5 Rx and Tx
     UART6_Handler,        // UART6 Rx and Tx
     UART7_Handler,        // UART7 Rx and Tx
-    0,
-    0,
-    0,
-    0,
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
     I2C2_Handler,         // I2C2 Master and Slave
     I2C3_Handler,         // I2C3 Master and Slave
     TIMER4A_Handler,      // Timer 4 subtimer A
     TIMER4B_Handler,      // Timer 4 subtimer B
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
+    0,                    // Reserved
     TIMER5A_Handler,      // Timer 5 subtimer A
     TIMER5B_Handler,      // Timer 5 subtimer B
     WTIMER0A_Handler,     // Wide Timer 0 subtimer A
@@ -294,15 +293,15 @@ PortExcHandlerFunc vectorTable[] __attribute__ ((section(".vectors"))) =
     WTIMER5A_Handler,     // Wide Timer 5 subtimer A
     WTIMER5B_Handler,     // Wide Timer 5 subtimer B
     FPU_Handler,          // FPU
-    0,
-    0,
+    0,                    // Reserved
+    0,                    // Reserved
     I2C4_Handler,         // I2C4 Master and Slave
     I2C5_Handler,         // I2C5 Master and Slave
     GPIOM_Handler,        // GPIO Port M
     GPION_Handler,        // GPIO Port N
     QEI2_Handler,         // Quadrature Encoder 2
-    0,
-    0,
+    0,                    // Reserved
+    0,                    // Reserved
     GPIOP0_Handler,       // GPIO Port P (Summary or P0)
     GPIOP1_Handler,       // GPIO Port P1
     GPIOP2_Handler,       // GPIO Port P2
@@ -321,10 +320,9 @@ PortExcHandlerFunc vectorTable[] __attribute__ ((section(".vectors"))) =
     GPIOQ7_Handler,       // GPIO Port Q7
     GPIOR_Handler,        // GPIO Port R
     GPIOS_Handler,        // GPIO Port S
-    PMW1_0_Handler,       // PWM 1 Generator 0
+    PWM1_0_Handler,       // PWM 1 Generator 0
     PWM1_1_Handler,       // PWM 1 Generator 1
     PWM1_2_Handler,       // PWM 1 Generator 2
     PWM1_3_Handler,       // PWM 1 Generator 3
-    PWM1_FAULT_Handler    // PWM 1 Fault
- };
-
+    PWM1_Fault_Handler,   // PWM 1 Fault
+};
