@@ -12,3 +12,4 @@ bin
 /test-stm32_uvopt.bak
 /test-stm32_uvproj.bak
 /test-stm32.uvgui_ArJo.bak
+/blink.bin
