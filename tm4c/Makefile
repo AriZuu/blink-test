@@ -49,7 +49,17 @@ DIR_USRINC +=	../common ../../picoos-micro
 
 # CMSIS setup
 CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-ports/tiva/tivaware $(CURRENTDIR)/../../cmsis-ports/tiva/inc 
-CMSIS_DEFINES=TM4C123GH6PM PART_TM4C123GH6PM gcc
+
+#
+# Tiva Launchpad
+#
+#CMSIS_DEFINES=TM4C123GH6PM PART_TM4C123GH6PM
+#
+# Tiva connected launchpad
+#
+CMSIS_DEFINES=TM4C1294NCPDT PART_TM4C1294NCPDT
+
+CMSIS_DEFINES += gcc
 export CMSIS_DEFINES
 export CMSIS_INCLUDES
 
@@ -58,6 +68,7 @@ DIR_OUTPUT = $(CURRENTDIR)/bin
 MODULES += ../../cmsis-ports/tiva ../../picoos-micro
 
 POSTLINK1 = arm-none-eabi-size $(TARGETOUT)
+POSTLINK2 = arm-none-eabi-objcopy -O binary $(TARGETOUT) blink.bin
 
 # ---------------------------------------------------------------------------
 # BUILD THE EXECUTABLE

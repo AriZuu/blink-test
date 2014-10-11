@@ -252,7 +252,7 @@
 /**
  * Defines the crystal clock in HZ
  */
-#define PORTCFG_CRYSTAL_CLOCK          58982400
+//#define PORTCFG_CRYSTAL_CLOCK          58982400
 
 /** @} */
 

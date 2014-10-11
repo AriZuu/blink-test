@@ -99,5 +99,20 @@
 #undef SYSCTL_BASE
 #undef UDMA_BASE
 
+#ifdef EPI0_BASE
+#undef EPI0_BASE
+#undef EMAC0_BASE
+#undef CCM0_BASE
+#undef I2C4_BASE
+#undef I2C5_BASE
+#undef I2C6_BASE
+#undef I2C7_BASE
+#undef I2C8_BASE
+#undef I2C9_BASE
+#undef TIMER6_BASE
+#undef TIMER7_BASE
+#endif
+
+
 void UART0_Handler(void);
 

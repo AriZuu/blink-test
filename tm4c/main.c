@@ -38,13 +38,25 @@
 
 #include "test.h"
 
+#ifdef SYSTEM_TM4C123_H
 #define RED_LED   GPIO_PIN_1
 #define BLUE_LED  GPIO_PIN_2
 #define GREEN_LED GPIO_PIN_3
+#define LED_PORT GPIO_PORTF_BASE
+#define LED_PERIPH SYSCTL_PERIPH_GPIOF
+#endif
+
+#ifdef SYSTEM_TM4C129_H
+#define RED_LED   GPIO_PIN_0
+#define BLUE_LED  GPIO_PIN_1
+#define GREEN_LED 0
+#define LED_PORT GPIO_PORTN_BASE
+#define LED_PERIPH SYSCTL_PERIPH_GPION
+#endif
 
 void testLedSet(LED_t led, bool on)
 {
-  uint32_t bits = GPIOPinRead(GPIO_PORTF_BASE, RED_LED|BLUE_LED|GREEN_LED);
+  uint32_t bits = GPIOPinRead(LED_PORT, RED_LED|BLUE_LED|GREEN_LED);
 
   switch (led) {
   case Green:
@@ -68,13 +80,13 @@ void testLedSet(LED_t led, bool on)
 
   }
 
-  GPIOPinWrite(GPIO_PORTF_BASE, RED_LED|BLUE_LED|GREEN_LED, bits);
+  GPIOPinWrite(LED_PORT, RED_LED|BLUE_LED|GREEN_LED, bits);
 }
 
 void testInitIO()
 {
-  SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
-  GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, RED_LED|BLUE_LED|GREEN_LED);
+  SysCtlPeripheralEnable(LED_PERIPH);
+  GPIOPinTypeGPIOOutput(LED_PORT, RED_LED|BLUE_LED|GREEN_LED);
 
 }
 
