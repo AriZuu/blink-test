@@ -29,10 +29,6 @@
  */
 
 
-#ifdef _DBG
-#define DEBUG
-#endif
-
 #include "TIVA.h"
 
 /*
