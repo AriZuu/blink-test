@@ -67,6 +67,11 @@ void Default_Handler()
     ;
 }
 
+extern void __error__(char *file, uint32_t line)
+{
+  p_pos_assert("tivaware", file, line);
+}
+
 extern unsigned int __stack[];
 
 #ifdef SYSTEM_TM4C123_H

@@ -47,14 +47,11 @@ SRC_OBJ =
 SRC_LIB =
 DIR_USRINC +=	../common ../../picoos-micro
 
-# CMSIS setup
-CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-ports/lpc13xx/inc
-CMSIS_DEFINES=CORE_M3
-export CMSIS_DEFINES CMSIS_INCLUDES
+CMSIS_MODULES=$(CURRENTDIR)/../../cmsis-ports/lpc13xx
 
 DIR_CONFIG = $(CURRENTDIR)
 DIR_OUTPUT = $(CURRENTDIR)/bin
-MODULES +=  ../../cmsis-ports/lpc13xx ../../picoos-micro
+MODULES +=   ../../picoos-micro
 
 
 POSTLINK1 = arm-none-eabi-size $(TARGETOUT)

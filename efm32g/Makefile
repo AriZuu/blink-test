@@ -49,14 +49,14 @@ CDEFINES +=
 DIR_USRINC +=	../common ../../picoos-micro
 
 # CMSIS setup
-CMSIS_FAMILY=EFM32G
-CMSIS_INCLUDES=$(CURRENTDIR)/../../cmsis-ports/efm32/inc $(CURRENTDIR)/../../cmsis-ports/efm32/device/$(CMSIS_FAMILY)/inc
-CMSIS_DEFINES=EFM32G210F128
-export CMSIS_INCLUDES CMSIS_DEFINES CMSIS_FAMILY
+EFM32_FAMILY=EFM32G
+EFM32_CHIP=EFM32G210F128
+CMSIS_MODULES=$(CURRENTDIR)/../../cmsis-ports/efm32
+export EFM32_FAMILY EFM32_CHIP
 
 DIR_CONFIG = $(CURRENTDIR)
 DIR_OUTPUT = $(CURRENTDIR)/bin
-MODULES +=  ../../cmsis-ports/efm32 ../../picoos-micro
+MODULES +=   ../../picoos-micro
 
 POSTLINK1 = arm-none-eabi-size $(TARGETOUT)
 POSTLINK2 = arm-none-eabi-objcopy -O ihex $(TARGETOUT) $(TARGET).hex
