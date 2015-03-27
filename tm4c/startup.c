@@ -35,6 +35,7 @@
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
 #include "driverlib/fpu.h"
+#include "driverlib/debug.h"
 
 uint32_t SystemCoreClock;
 

@@ -30,3 +30,4 @@
 
 #include "chip.h"
 void SystemInit(void);
+void Chip_SystemInit(void);
