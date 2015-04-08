@@ -76,9 +76,9 @@ void SystemInit()
 
   SystemCoreClock = CS_getMCLK();
 
-#ifdef NOTYET
+  MAP_SysCtl_enableSRAMBankRetention(SYSCTL_SRAM_BANK7);
+
   SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
-#endif
 
 }
 

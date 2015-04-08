@@ -247,7 +247,7 @@
  * This define must be set to the tickrate of the timer
  * interrupt (= timer ticks per second).
  */
-#define HZ                   512  /* timer ticks per second */
+#define HZ                   1  /* timer ticks per second */
 
 /**
  * Defines the crystal clock in HZ
@@ -535,11 +535,12 @@
  *-------------------------------------------------------------------------*/
 
 #define PORTCFG_IRQ_STACK_SIZE 1024
-#define PORTCFG_CONOUT_ITM 0
-#define PORTCFG_CON_EUSCI 1
+#define PORTCFG_CONOUT_ITM 1
+#define PORTCFG_CON_EUSCI 0
 #define PORTCFG_TICK_SYSTICK 0
 #define PORTCFG_TICK_WDT 1
 #define PORTCFG_TICK_RTC 0
 #define PORTCFG_VECTORS 1
+#define PORTCFG_SLEEP_IN_DEBUG 1
 
 #endif /* _POSCFG_H */
