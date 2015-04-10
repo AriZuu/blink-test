@@ -535,8 +535,8 @@
  *-------------------------------------------------------------------------*/
 
 #define PORTCFG_IRQ_STACK_SIZE 1024
-#define PORTCFG_CONOUT_ITM 1
-#define PORTCFG_CON_EUSCI 0
+#define PORTCFG_CONOUT_ITM 0
+#define PORTCFG_CON_EUSCI 1
 #define PORTCFG_TICK_SYSTICK 0
 #define PORTCFG_TICK_WDT 1
 #define PORTCFG_TICK_RTC 0

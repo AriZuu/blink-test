@@ -58,19 +58,31 @@ void SystemInit()
   MAP_FlashCtl_setWaitState(FLASH_BANK1, 2);
 #endif
 
-  CS_startHFXT(false);
-  CS_startLFXT(false);
-
+#ifdef USE_HFXT
   /*
    * Confgure MCLK, HSMCLK & SMCLK to HFXT/2 (24 Mhz)
    */
+  CS_startHFXT(false);
   MAP_CS_initClockSignal(CS_MCLK, CS_HFXTCLK_SELECT, CS_CLOCK_DIVIDER_2);
   MAP_CS_initClockSignal(CS_HSMCLK, CS_HFXTCLK_SELECT, CS_CLOCK_DIVIDER_2);
   MAP_CS_initClockSignal(CS_SMCLK, CS_HFXTCLK_SELECT, CS_CLOCK_DIVIDER_2);
 
+#else
+
+  /*
+   * Confgure MCLK, HSMCLK & SMCLK to DCO (24 Mhz)
+   */
+  CS_setDCOCenteredFrequency(CS_DCO_FREQUENCY_24);
+  MAP_CS_initClockSignal(CS_MCLK, CS_DCOCLK_SELECT, CS_CLOCK_DIVIDER_1);
+  MAP_CS_initClockSignal(CS_HSMCLK, CS_DCOCLK_SELECT, CS_CLOCK_DIVIDER_1);
+  MAP_CS_initClockSignal(CS_SMCLK, CS_DCOCLK_SELECT, CS_CLOCK_DIVIDER_1);
+
+#endif
+
   /*
    * Configure ACLK & BCLK as LFXT (32768 Hz)
    */
+  CS_startLFXT(false);
   MAP_CS_initClockSignal(CS_ACLK, CS_LFXTCLK_SELECT, CS_CLOCK_DIVIDER_1);
   MAP_CS_initClockSignal(CS_BCLK, CS_LFXTCLK_SELECT, CS_CLOCK_DIVIDER_1);
 
