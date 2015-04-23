@@ -72,7 +72,7 @@
  *   2 = The user supplys its own memory allocation routines.
  *       See defines ::NOSCFG_MEM_USER_MALLOC and ::NOSCFG_MEM_USER_FREE.
  */
-#define NOSCFG_MEM_MANAGER_TYPE      1
+#define NOSCFG_MEM_MANAGER_TYPE      0
 
 /** Overwrite standard malloc/realloc/free/memcpy/memset functions with
  *  nano layer memory functions: @n
