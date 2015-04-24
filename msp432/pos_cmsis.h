@@ -33,3 +33,4 @@
 extern uint32_t SystemCoreClock;
 void SystemInit(void);
 void EUSCIA0_Handler(void);
+void WDT_Handler(void);
