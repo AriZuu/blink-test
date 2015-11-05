@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../../../picoos/src/pico/fbit_gen.c ../../../picoos/src/pico/picoos.c ../../../picoos/src/nano/n_bhalf.c ../../../picoos/src/nano/n_conio.c ../../../picoos/src/nano/n_core.c ../../../picoos/src/nano/n_mem.c ../../../picoos/src/nano/n_reg.c ../../../picoos/ports/pic32/arch_c.c ../../../picoos/ports/pic32/con_uart.c ../../../picoos/ports/pic32/tick_core.c ../../../picoos/ports/pic32/tick_timer.c ../../common/test.c ../main.c ../../../picoos-micro/diag.c ../../../picoos-micro/u_init.c
+SOURCEFILES_QUOTED_IF_SPACED=../../../picoos/src/pico/fbit_gen.c ../../../picoos/src/pico/picoos.c ../../../picoos/src/nano/n_bhalf.c ../../../picoos/src/nano/n_conio.c ../../../picoos/src/nano/n_core.c ../../../picoos/src/nano/n_mem.c ../../../picoos/src/nano/n_reg.c ../../../picoos-micro/diag.c ../../../picoos-micro/u_init.c ../../../picoos/ports/pic32/arch_c.c ../../../picoos/ports/pic32/con_uart.c ../../../picoos/ports/pic32/tick_core.c ../../../picoos/ports/pic32/tick_timer.c ../../common/test.c ../main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/518228807/fbit_gen.o ${OBJECTDIR}/_ext/518228807/picoos.o ${OBJECTDIR}/_ext/518161878/n_bhalf.o ${OBJECTDIR}/_ext/518161878/n_conio.o ${OBJECTDIR}/_ext/518161878/n_core.o ${OBJECTDIR}/_ext/518161878/n_mem.o ${OBJECTDIR}/_ext/518161878/n_reg.o ${OBJECTDIR}/_ext/500852747/arch_c.o ${OBJECTDIR}/_ext/500852747/con_uart.o ${OBJECTDIR}/_ext/500852747/tick_core.o ${OBJECTDIR}/_ext/500852747/tick_timer.o ${OBJECTDIR}/_ext/1329223797/test.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1219146993/diag.o ${OBJECTDIR}/_ext/1219146993/u_init.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/518228807/fbit_gen.o.d ${OBJECTDIR}/_ext/518228807/picoos.o.d ${OBJECTDIR}/_ext/518161878/n_bhalf.o.d ${OBJECTDIR}/_ext/518161878/n_conio.o.d ${OBJECTDIR}/_ext/518161878/n_core.o.d ${OBJECTDIR}/_ext/518161878/n_mem.o.d ${OBJECTDIR}/_ext/518161878/n_reg.o.d ${OBJECTDIR}/_ext/500852747/arch_c.o.d ${OBJECTDIR}/_ext/500852747/con_uart.o.d ${OBJECTDIR}/_ext/500852747/tick_core.o.d ${OBJECTDIR}/_ext/500852747/tick_timer.o.d ${OBJECTDIR}/_ext/1329223797/test.o.d ${OBJECTDIR}/_ext/1472/main.o.d ${OBJECTDIR}/_ext/1219146993/diag.o.d ${OBJECTDIR}/_ext/1219146993/u_init.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/518228807/fbit_gen.o ${OBJECTDIR}/_ext/518228807/picoos.o ${OBJECTDIR}/_ext/518161878/n_bhalf.o ${OBJECTDIR}/_ext/518161878/n_conio.o ${OBJECTDIR}/_ext/518161878/n_core.o ${OBJECTDIR}/_ext/518161878/n_mem.o ${OBJECTDIR}/_ext/518161878/n_reg.o ${OBJECTDIR}/_ext/1219146993/diag.o ${OBJECTDIR}/_ext/1219146993/u_init.o ${OBJECTDIR}/_ext/500852747/arch_c.o ${OBJECTDIR}/_ext/500852747/con_uart.o ${OBJECTDIR}/_ext/500852747/tick_core.o ${OBJECTDIR}/_ext/500852747/tick_timer.o ${OBJECTDIR}/_ext/1329223797/test.o ${OBJECTDIR}/_ext/1472/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/518228807/fbit_gen.o.d ${OBJECTDIR}/_ext/518228807/picoos.o.d ${OBJECTDIR}/_ext/518161878/n_bhalf.o.d ${OBJECTDIR}/_ext/518161878/n_conio.o.d ${OBJECTDIR}/_ext/518161878/n_core.o.d ${OBJECTDIR}/_ext/518161878/n_mem.o.d ${OBJECTDIR}/_ext/518161878/n_reg.o.d ${OBJECTDIR}/_ext/1219146993/diag.o.d ${OBJECTDIR}/_ext/1219146993/u_init.o.d ${OBJECTDIR}/_ext/500852747/arch_c.o.d ${OBJECTDIR}/_ext/500852747/con_uart.o.d ${OBJECTDIR}/_ext/500852747/tick_core.o.d ${OBJECTDIR}/_ext/500852747/tick_timer.o.d ${OBJECTDIR}/_ext/1329223797/test.o.d ${OBJECTDIR}/_ext/1472/main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/518228807/fbit_gen.o ${OBJECTDIR}/_ext/518228807/picoos.o ${OBJECTDIR}/_ext/518161878/n_bhalf.o ${OBJECTDIR}/_ext/518161878/n_conio.o ${OBJECTDIR}/_ext/518161878/n_core.o ${OBJECTDIR}/_ext/518161878/n_mem.o ${OBJECTDIR}/_ext/518161878/n_reg.o ${OBJECTDIR}/_ext/500852747/arch_c.o ${OBJECTDIR}/_ext/500852747/con_uart.o ${OBJECTDIR}/_ext/500852747/tick_core.o ${OBJECTDIR}/_ext/500852747/tick_timer.o ${OBJECTDIR}/_ext/1329223797/test.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1219146993/diag.o ${OBJECTDIR}/_ext/1219146993/u_init.o
+OBJECTFILES=${OBJECTDIR}/_ext/518228807/fbit_gen.o ${OBJECTDIR}/_ext/518228807/picoos.o ${OBJECTDIR}/_ext/518161878/n_bhalf.o ${OBJECTDIR}/_ext/518161878/n_conio.o ${OBJECTDIR}/_ext/518161878/n_core.o ${OBJECTDIR}/_ext/518161878/n_mem.o ${OBJECTDIR}/_ext/518161878/n_reg.o ${OBJECTDIR}/_ext/1219146993/diag.o ${OBJECTDIR}/_ext/1219146993/u_init.o ${OBJECTDIR}/_ext/500852747/arch_c.o ${OBJECTDIR}/_ext/500852747/con_uart.o ${OBJECTDIR}/_ext/500852747/tick_core.o ${OBJECTDIR}/_ext/500852747/tick_timer.o ${OBJECTDIR}/_ext/1329223797/test.o ${OBJECTDIR}/_ext/1472/main.o
 
 # Source Files
-SOURCEFILES=../../../picoos/src/pico/fbit_gen.c ../../../picoos/src/pico/picoos.c ../../../picoos/src/nano/n_bhalf.c ../../../picoos/src/nano/n_conio.c ../../../picoos/src/nano/n_core.c ../../../picoos/src/nano/n_mem.c ../../../picoos/src/nano/n_reg.c ../../../picoos/ports/pic32/arch_c.c ../../../picoos/ports/pic32/con_uart.c ../../../picoos/ports/pic32/tick_core.c ../../../picoos/ports/pic32/tick_timer.c ../../common/test.c ../main.c ../../../picoos-micro/diag.c ../../../picoos-micro/u_init.c
+SOURCEFILES=../../../picoos/src/pico/fbit_gen.c ../../../picoos/src/pico/picoos.c ../../../picoos/src/nano/n_bhalf.c ../../../picoos/src/nano/n_conio.c ../../../picoos/src/nano/n_core.c ../../../picoos/src/nano/n_mem.c ../../../picoos/src/nano/n_reg.c ../../../picoos-micro/diag.c ../../../picoos-micro/u_init.c ../../../picoos/ports/pic32/arch_c.c ../../../picoos/ports/pic32/con_uart.c ../../../picoos/ports/pic32/tick_core.c ../../../picoos/ports/pic32/tick_timer.c ../../common/test.c ../main.c
 
 
 CFLAGS=
@@ -136,6 +136,18 @@ ${OBJECTDIR}/_ext/518161878/n_reg.o: ../../../picoos/src/nano/n_reg.c  nbproject
 	@${RM} ${OBJECTDIR}/_ext/518161878/n_reg.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/518161878/n_reg.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/518161878/n_reg.o.d" -o ${OBJECTDIR}/_ext/518161878/n_reg.o ../../../picoos/src/nano/n_reg.c   
 	
+${OBJECTDIR}/_ext/1219146993/diag.o: ../../../picoos-micro/diag.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1219146993" 
+	@${RM} ${OBJECTDIR}/_ext/1219146993/diag.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1219146993/diag.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1219146993/diag.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/1219146993/diag.o.d" -o ${OBJECTDIR}/_ext/1219146993/diag.o ../../../picoos-micro/diag.c   
+	
+${OBJECTDIR}/_ext/1219146993/u_init.o: ../../../picoos-micro/u_init.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1219146993" 
+	@${RM} ${OBJECTDIR}/_ext/1219146993/u_init.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1219146993/u_init.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1219146993/u_init.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/1219146993/u_init.o.d" -o ${OBJECTDIR}/_ext/1219146993/u_init.o ../../../picoos-micro/u_init.c   
+	
 ${OBJECTDIR}/_ext/500852747/arch_c.o: ../../../picoos/ports/pic32/arch_c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/500852747" 
 	@${RM} ${OBJECTDIR}/_ext/500852747/arch_c.o.d 
@@ -171,18 +183,6 @@ ${OBJECTDIR}/_ext/1472/main.o: ../main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c   
-	
-${OBJECTDIR}/_ext/1219146993/diag.o: ../../../picoos-micro/diag.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1219146993" 
-	@${RM} ${OBJECTDIR}/_ext/1219146993/diag.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1219146993/diag.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1219146993/diag.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/1219146993/diag.o.d" -o ${OBJECTDIR}/_ext/1219146993/diag.o ../../../picoos-micro/diag.c   
-	
-${OBJECTDIR}/_ext/1219146993/u_init.o: ../../../picoos-micro/u_init.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1219146993" 
-	@${RM} ${OBJECTDIR}/_ext/1219146993/u_init.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1219146993/u_init.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1219146993/u_init.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/1219146993/u_init.o.d" -o ${OBJECTDIR}/_ext/1219146993/u_init.o ../../../picoos-micro/u_init.c   
 	
 else
 ${OBJECTDIR}/_ext/518228807/fbit_gen.o: ../../../picoos/src/pico/fbit_gen.c  nbproject/Makefile-${CND_CONF}.mk
@@ -227,6 +227,18 @@ ${OBJECTDIR}/_ext/518161878/n_reg.o: ../../../picoos/src/nano/n_reg.c  nbproject
 	@${RM} ${OBJECTDIR}/_ext/518161878/n_reg.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/518161878/n_reg.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/518161878/n_reg.o.d" -o ${OBJECTDIR}/_ext/518161878/n_reg.o ../../../picoos/src/nano/n_reg.c   
 	
+${OBJECTDIR}/_ext/1219146993/diag.o: ../../../picoos-micro/diag.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1219146993" 
+	@${RM} ${OBJECTDIR}/_ext/1219146993/diag.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1219146993/diag.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1219146993/diag.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/1219146993/diag.o.d" -o ${OBJECTDIR}/_ext/1219146993/diag.o ../../../picoos-micro/diag.c   
+	
+${OBJECTDIR}/_ext/1219146993/u_init.o: ../../../picoos-micro/u_init.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1219146993" 
+	@${RM} ${OBJECTDIR}/_ext/1219146993/u_init.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1219146993/u_init.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1219146993/u_init.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/1219146993/u_init.o.d" -o ${OBJECTDIR}/_ext/1219146993/u_init.o ../../../picoos-micro/u_init.c   
+	
 ${OBJECTDIR}/_ext/500852747/arch_c.o: ../../../picoos/ports/pic32/arch_c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/500852747" 
 	@${RM} ${OBJECTDIR}/_ext/500852747/arch_c.o.d 
@@ -262,18 +274,6 @@ ${OBJECTDIR}/_ext/1472/main.o: ../main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c   
-	
-${OBJECTDIR}/_ext/1219146993/diag.o: ../../../picoos-micro/diag.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1219146993" 
-	@${RM} ${OBJECTDIR}/_ext/1219146993/diag.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1219146993/diag.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1219146993/diag.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/1219146993/diag.o.d" -o ${OBJECTDIR}/_ext/1219146993/diag.o ../../../picoos-micro/diag.c   
-	
-${OBJECTDIR}/_ext/1219146993/u_init.o: ../../../picoos-micro/u_init.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1219146993" 
-	@${RM} ${OBJECTDIR}/_ext/1219146993/u_init.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1219146993/u_init.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1219146993/u_init.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -D_DBG -DPOSNANO -D_SUPPRESS_PLIB_WARNING -D_DISABLE_OPENADC10_CONFIGPORT_WARNING -I"../" -I"../../common" -I"../../../picoos/ports/pic32" -I"../../../picoos/inc" -I"../../../picoos-micro" -MMD -MF "${OBJECTDIR}/_ext/1219146993/u_init.o.d" -o ${OBJECTDIR}/_ext/1219146993/u_init.o ../../../picoos-micro/u_init.c   
 	
 endif
 
