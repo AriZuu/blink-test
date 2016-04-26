@@ -555,4 +555,7 @@
 #define PORTCFG_IRQ_STACK_SIZE    110
 #endif
 
+#define POSCFG_FEATURE_POWER 1
+#define POSCFG_FEATURE_POWER_WAKEUP 1
+
 #endif /* _POSCFG_H */

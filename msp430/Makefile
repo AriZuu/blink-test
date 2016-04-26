@@ -30,10 +30,10 @@
 RELROOT = ../../picoos/
 PORT = msp430
 
-#MCU ?= msp430f2274
+MCU ?= msp430f2274
 #MCU ?= cc430f5137
 #MCU ?= msp430fg4619 
-MCU ?= msp430g2533
+#MCU ?= msp430g2533
 
 export MCU
 
