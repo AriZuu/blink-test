@@ -81,6 +81,8 @@ int main(int argc, char **argv)
   while (!nrf_clock_event_check(NRF_CLOCK_EVENT_LFCLKSTARTED));
   nrf_clock_event_clear(NRF_CLOCK_EVENT_LFCLKSTARTED);
 
+  SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+
   testStart();
   return 0;
 }

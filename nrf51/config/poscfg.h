@@ -531,6 +531,7 @@
  *-------------------------------------------------------------------------*/
 
 #define POSCFG_FEATURE_POWER 1
+#define POSCFG_FEATURE_TICKLESS 1
 #define PORTCFG_SLEEP_IN_DEBUG 1
 #define PORTCFG_IRQ_STACK_SIZE 1600
 #define PORTCFG_CONOUT_ITM 0
