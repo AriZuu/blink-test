@@ -50,9 +50,10 @@ DIR_USRINC += ../common
 
 #
 # CMSIS setup
-CMSIS_MODULES=$(CURRENTDIR)/../../cmsis-ports/nrf5-sdk
+CMSIS_MODULES=$(CURRENTDIR)/../../nrf5-sdk/hal
 NRF5_SOFTDEVICE = s130
-NRF5_LIBRARIES	= log  log/src util scheduler
+NRF5_LIBRARIES	= log  log/src util #scheduler
+NRF5_DRIVERS = 
 NRF5_DEFINES  	= NRF51 NRF51822 BOARD_PCA10001
 
 DIR_CONFIG = $(CURRENTDIR)/config
