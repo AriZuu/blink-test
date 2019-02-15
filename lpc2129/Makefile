@@ -30,7 +30,7 @@
 RELROOT = ../../picoos/
 PORT = lpc2xxx
 
-BUILD = DEBUG
+BUILD = RELEASE
 LD_SCRIPTS=lpc2129-nova.ld
 
 include $(RELROOT)make/common.mak
