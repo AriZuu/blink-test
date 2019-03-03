@@ -5,12 +5,12 @@ set(PORT lpc2xxx)
 set(NANO 1)
 set(LD_SCRIPTS lpc2129-nova.ld)
 
-include(../../picoos/setup.cmake)
+include(../../picoos/cmake/ToolchainInit.cmake)
 
 
 project(blink_test)
 set(DIR_CONFIG ${CMAKE_CURRENT_SOURCE_DIR})
-add_subdirectory(../../picoos picoos)
+add_subdirectory(${PICOOS_DIR} picoos)
 add_subdirectory(../../picoos-micro picoos-micro)
 
 add_executable(${PROJECT_NAME} main.c ../common/test.c)
