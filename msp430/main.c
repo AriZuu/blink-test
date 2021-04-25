@@ -184,7 +184,7 @@ static void initPins(void)
 
   UCA0CTL1 |= UCSWRST;
 
-#if defined(__msp430x22x4) || defined(__msp430x22x2)
+#if defined(__MSP430F2274__)
 
   P3DIR |= BIT4;                            // Set P3.4 as TX output
   P3SEL |= 0x30;            // P3.4,5 = USCI_A0 TXD/RXD
