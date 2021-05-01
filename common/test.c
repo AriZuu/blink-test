@@ -118,6 +118,7 @@ static void task1(void *arg)
   JIF_t spinUntil;
   POSTASK_t task;
 
+  uosInit();
   uosBootDiag();
   uosResourceDiag();
 
